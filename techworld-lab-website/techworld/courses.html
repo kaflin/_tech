@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Courses – TechWorld Lab</title>
+  <link rel="stylesheet" href="css/variables.css"/>
+  <link rel="stylesheet" href="css/navbar.css"/>
+  <link rel="stylesheet" href="css/sections.css"/>
+</head>
+<body data-page="courses">
+
+  <!-- PAGE HERO -->
+  <section style="padding:160px 24px 80px;position:relative;overflow:hidden;">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="container" style="text-align:center;position:relative;z-index:1;">
+      <div class="section-tag fade-in">Our Programs</div>
+      <h1 class="section-title fade-in" style="font-size:clamp(2.2rem,5vw,3.8rem);">All <span>Courses</span> & Programs</h1>
+      <p class="section-subtitle fade-in" style="margin:0 auto 0;text-align:center;">
+        From beginner manual testing to advanced automation engineering — we have the right path for you.
+      </p>
+    </div>
+  </section>
+
+  <!-- COURSES -->
+  <section class="section" style="padding-top:0;">
+    <div class="container">
+      <div class="filter-tabs fade-in" id="courseFilterTabs">
+        <button class="filter-tab active" data-filter="all">All</button>
+        <button class="filter-tab" data-filter="automation">Automation</button>
+        <button class="filter-tab" data-filter="testing">Manual Testing</button>
+        <button class="filter-tab" data-filter="api">API Testing</button>
+        <button class="filter-tab" data-filter="devops">DevOps</button>
+        <button class="filter-tab" data-filter="performance">Performance</button>
+      </div>
+      <div class="courses-grid" id="allCourseGrid"></div>
+    </div>
+  </section>
+
+  <!-- LEARNING PATH -->
+  <section class="section" style="background:rgba(0,212,255,0.02);border-top:1px solid var(--border);">
+    <div class="container">
+      <div style="text-align:center;" class="fade-in">
+        <div class="section-tag">Career Path</div>
+        <h2 class="section-title">Your <span>Learning Journey</span></h2>
+        <p class="section-subtitle" style="margin:0 auto 60px;">Follow our structured path from zero to senior QA engineer.</p>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px;">
+        <div class="card fade-in" style="text-align:center;">
+          <div style="font-size:2.5rem;margin-bottom:16px;">📚</div>
+          <div style="font-family:var(--font-display);font-size:0.7rem;letter-spacing:3px;color:var(--primary);margin-bottom:8px;">STEP 1</div>
+          <div style="font-family:var(--font-display);font-size:1rem;font-weight:700;color:var(--text-bright);margin-bottom:10px;">Manual Testing</div>
+          <div style="font-size:0.85rem;color:var(--text-muted);line-height:1.6;">Learn the fundamentals of software QA, test cases & bug reporting.</div>
+        </div>
+        <div class="card fade-in" style="text-align:center;">
+          <div style="font-size:2.5rem;margin-bottom:16px;">🤖</div>
+          <div style="font-family:var(--font-display);font-size:0.7rem;letter-spacing:3px;color:var(--accent);margin-bottom:8px;">STEP 2</div>
+          <div style="font-family:var(--font-display);font-size:1rem;font-weight:700;color:var(--text-bright);margin-bottom:10px;">Automation Basics</div>
+          <div style="font-size:0.85rem;color:var(--text-muted);line-height:1.6;">Pick up Selenium with Java, write your first automated test suite.</div>
+        </div>
+        <div class="card fade-in" style="text-align:center;">
+          <div style="font-size:2.5rem;margin-bottom:16px;">⚡</div>
+          <div style="font-family:var(--font-display);font-size:0.7rem;letter-spacing:3px;color:var(--secondary);margin-bottom:8px;">STEP 3</div>
+          <div style="font-family:var(--font-display);font-size:1rem;font-weight:700;color:var(--text-bright);margin-bottom:10px;">API & Advanced Tools</div>
+          <div style="font-size:0.85rem;color:var(--text-muted);line-height:1.6;">Master Postman, Rest Assured, Cypress, and Playwright.</div>
+        </div>
+        <div class="card fade-in" style="text-align:center;">
+          <div style="font-size:2.5rem;margin-bottom:16px;">🚀</div>
+          <div style="font-family:var(--font-display);font-size:0.7rem;letter-spacing:3px;color:var(--primary);margin-bottom:8px;">STEP 4</div>
+          <div style="font-family:var(--font-display);font-size:1rem;font-weight:700;color:var(--text-bright);margin-bottom:10px;">DevOps & Placement</div>
+          <div style="font-size:0.85rem;color:var(--text-muted);line-height:1.6;">CI/CD, Jenkins, Docker — then land your dream QA role.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="js/components.js"></script>
+  <script src="js/courses.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      renderCourseCards('allCourseGrid', 'all');
+      initCourseFilters('courseFilterTabs', 'allCourseGrid');
+    });
+  </script>
+</body>
+</html>
